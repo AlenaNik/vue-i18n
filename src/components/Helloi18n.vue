@@ -7,6 +7,11 @@
         <button @click="setLocale('de')">German</button>
         <p>{{ $tc("notification", 1)}}</p>
         <p>{{ $tc("notification", 2)}}</p>
+        <h1>{{$d(new Date(), "short")}}</h1>
+        <h1>{{$d(new Date(), "short", "en-GB")}}</h1>
+
+        <h1>{{$d(new Date(), "long")}}</h1>
+
     </div>
 </template>
 
