@@ -2,6 +2,8 @@
   "message": {
     "goodbye": "bye {name}!",
     "greeting": "hello {name}!",
-    "notification": "notification | notifications"
+    "notification": "notification | notifications",
+    "terms": "I accept the {termsURL} of the service",
+    "termsLink": "terms and conditions"
   }
 }

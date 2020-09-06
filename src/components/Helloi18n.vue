@@ -9,12 +9,18 @@
         <p>{{ $tc("notification", 2)}}</p>
         <h1>{{$d(new Date(), "short")}}</h1>
 
-<!--        <h1>{{$d(new Date(), "long")}}</h1>-->
+        <h1>{{$d(new Date(), "long")}}</h1>
         <br>
         <h1>Currency</h1>
         <p>{{$n(100, 'currency')}}</p>
 
        <p> {{ product }}</p>
+
+        <i18n path="terms" tag="p">
+            <template v-slot:termsURL>
+                <a href="/terms">{{ $t("termsLink")}}</a>
+            </template>
+        </i18n>
 
         <button @click="setLocale('en-US')">USD</button>
         <button @click="setLocale('en-GB')">GBP</button>
@@ -24,6 +30,7 @@
 </template>
 
 <script>
+
 const products = {
    'en-GB': {
        name: 'Red jeans',
