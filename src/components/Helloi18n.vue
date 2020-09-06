@@ -8,19 +8,50 @@
         <p>{{ $tc("notification", 1)}}</p>
         <p>{{ $tc("notification", 2)}}</p>
         <h1>{{$d(new Date(), "short")}}</h1>
-        <h1>{{$d(new Date(), "short", "en-GB")}}</h1>
 
-        <h1>{{$d(new Date(), "long")}}</h1>
+<!--        <h1>{{$d(new Date(), "long")}}</h1>-->
+        <br>
+        <h1>Currency</h1>
+        <p>{{$n(100, 'currency')}}</p>
+
+       <p> {{ product }}</p>
+
+        <button @click="setLocale('en-US')">USD</button>
+        <button @click="setLocale('en-GB')">GBP</button>
+        <button @click="setLocale('es-ES')">EUR</button>
 
     </div>
 </template>
 
 <script>
+const products = {
+   'en-GB': {
+       name: 'Red jeans',
+       stock: 4,
+       price: 89
+   },
+   'en-US': {
+       name: 'Red jeans',
+       stock: 2,
+       price: 109
+    },
+    'es-ES': {
+        name: 'Vaqueros',
+        stock: 2,
+        price: 5
+    },
+}
+
 export default {
 name: "HelloI18n",
   data() {
     return {
       name: 'Alena'
+    }
+  },
+  computed: {
+    product() {
+        return products[this.$i18n.locale];
     }
   },
   methods:{
