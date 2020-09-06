@@ -13,7 +13,7 @@ export default {
     HelloI18n
   },
     created() {
-      const locale = localStorage.getItem('locale')
+      const locale = localStorage.getItem('locale');
       if (locale) {
           this.$i18n.locale = locale;
       } else if (navigator.language) {

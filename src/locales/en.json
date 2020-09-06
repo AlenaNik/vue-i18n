@@ -1,6 +1,7 @@
 {
   "message": {
-    "goodbye": "bye!",
-    "greeting": "hello!"
+    "goodbye": "bye {name}!",
+    "greeting": "hello {name}!",
+    "notification": "notification | notifications"
   }
 }
