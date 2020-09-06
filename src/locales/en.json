@@ -1,4 +1,7 @@
 {
-  "message": "hello i18n !!",
-  "goodbye": "bye!"
+  "goodbye": "bye!",
+  "message": {
+    "goodbye": "",
+    "greeting": ""
+  }
 }
